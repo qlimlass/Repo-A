@@ -12,4 +12,5 @@ jobs:
         run: |
           curl \
           -H "Accept: application/vnd.github.v3+json" \
+          -u ${{ secrets.ACCESS_TOKEN }} \
           https://api.github.com/repos/qlimlass/Repo-B/actions/permissions
