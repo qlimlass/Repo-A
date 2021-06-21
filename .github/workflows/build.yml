@@ -8,5 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a one-line script
-        run: echo Hello, build!
+      - name: Run a curl command
+        run: |
+          curl \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/qlimlass/Repo-B/actions/permissions
