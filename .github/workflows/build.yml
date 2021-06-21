@@ -10,7 +10,5 @@ jobs:
 
       - name: Run a curl command
         run: |
-          curl \
-          -H "Accept: application/vnd.github.v3+json" \
+          curl -X POST https://api.github.com/repos/qlimlass/Repo-B/dispatches \
           -u ${{ secrets.ACCESS_TOKEN }} \
-          https://api.github.com/repos/qlimlass/Repo-B/actions/permissions
