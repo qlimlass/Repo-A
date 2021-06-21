@@ -12,3 +12,4 @@ jobs:
         run: |
           curl -X POST https://api.github.com/repos/qlimlass/Repo-B/dispatches \
           -u ${{ secrets.ACCESS_TOKEN }} \
+          --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
