@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a curl command
+      - name: Run test automation dispatch
         run: |
           curl -X POST https://api.github.com/repos/qlimlass/Repo-B/dispatches \
-          -u ${{ secrets.ACCESS_TOKEN }} \
+          -u ${{ secrets.TEST_AUTOMATION_ACCESS_TOKEN }} \
           --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
