@@ -1,6 +1,6 @@
 name: test-automation tests
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: macos-latest
