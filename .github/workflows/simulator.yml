@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
 
@@ -21,3 +21,6 @@ jobs:
       
       - name: XCode Command Line Tools checking
         run: xcode-select --version
+        
+      - name: gpg checking
+        run: gpg --version
