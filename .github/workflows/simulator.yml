@@ -3,9 +3,24 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@master
-
+      
       - name: gpg checking
         run: gpg --version
+
+      - name: Devices checking
+        run: xcrun simctl list devices
+        
+      - name: Ruby checking
+        run: ruby -v
+        
+      - name: macOS checking
+        run: system_profiler SPSoftwareDataType
+        
+      - name: XCode checking
+        run: xcodebuild -version
+      
+      - name: XCode Command Line Tools checking
+        run: xcode-select --version
